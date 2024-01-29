@@ -9,6 +9,8 @@ int _strlenc(const char *s);
 void print_percent(va_list arg, int *count);
 void print_char(va_list arg, int *count);
 void print_string(va_list arg, int *count);
+int print_int(va_list arg, int *count);
+int print_still(va_list arg, int *count);
 int _printf(const char *format, ...);
 
 #endif // MAIN_H
