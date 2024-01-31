@@ -9,17 +9,18 @@
  * Return: void
  */
 
-void print_string(va_list args, int *count)
+int print_string(va_list args, int *count)
 {
-	char *str = va_arg(args, char *);
-	int i;
+	char *str;
 
+	str = va_arg(args, char *);
 	if (str == NULL)
 		str = "(null)";
-
-	for (i = 0; str[i]; i++)
+	while (*str)
 	{
-		_putchar(str[i]);
-		*count += 1;
+		_putchar(*str);
+		(*count)++;
+		str++;
 	}
+	return (*count);
 }

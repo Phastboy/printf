@@ -8,10 +8,12 @@
  * Return: void
  */
 
-void print_char(va_list args, int *count)
+int print_char(va_list args, int *count)
 {
-	char c = va_arg(args, int);
+	char c;
 
+	c = va_arg(args, int);
 	_putchar(c);
 	*count += 1;
+	return (*count);
 }

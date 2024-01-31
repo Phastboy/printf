@@ -8,10 +8,10 @@
  * Return: void
  */
 
-void print_percent(va_list args, int *count)
+int print_percent(va_list args, int *count)
 {
 	(void)args;
-
 	_putchar(37);
-	*count += 1;
+	(*count)++;
+	return (*count);
 }
